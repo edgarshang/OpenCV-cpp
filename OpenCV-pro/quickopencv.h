@@ -8,5 +8,6 @@ class QuickDemo
 {
 public:
 	void colorSpace_Demo(Mat &image);
+	void matCreation_Demo(Mat &image);
 };
 

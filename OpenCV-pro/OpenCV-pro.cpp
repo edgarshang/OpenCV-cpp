@@ -19,7 +19,8 @@ int main()
 	namedWindow("输入窗口", WINDOW_FREERATIO);
 	imshow("输入窗口", src);
 	QuickDemo qd;
-	qd.colorSpace_Demo(src);
+	// qd.colorSpace_Demo(src);
+	qd.matCreation_Demo(src);
 	waitKey(0);
 	destroyAllWindows();
 	return 0;
