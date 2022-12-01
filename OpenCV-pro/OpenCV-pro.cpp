@@ -2,14 +2,24 @@
 //
 #include <opencv2\opencv.hpp>
 #include <iostream>
+#include <quickopencv.h>
+
 
 using namespace std;
 using namespace cv;
 
 int main()
 {
-	Mat src = imread("D:/project/OpenCV/opencv_tutorial_data/images/wm.jpg");
-	imshow("input", src);
+	Mat src = imread("D:/project/OpenCV/opencv_tutorial_data/images/wm.jpg", IMREAD_COLOR);
+	if (src.empty())
+	{
+		printf("could not load image...");
+		return -1;
+	}
+	namedWindow("输入窗口", WINDOW_FREERATIO);
+	imshow("输入窗口", src);
+	QuickDemo qd;
+	qd.colorSpace_Demo(src);
 	waitKey(0);
 	destroyAllWindows();
 	return 0;
